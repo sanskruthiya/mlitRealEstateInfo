@@ -4,10 +4,10 @@ import json
 import csv
 
 base_url = "https://www.reinfolib.mlit.go.jp/ex-api/external/" #ベースURL
-api_type = "XKT023" #APIの種類を記入。後の出力ファイル名にも反映させるため変数として格納しておく。
+api_type = "XIT001" #APIの種類を記入。後の出力ファイル名にも反映させるため変数として格納しておく。
 
 mlit_url = base_url + api_type #リクエスト用URL
-mlit_params = {"response_format": "geojson", "z": "11", "x": "1819", "y": "805"} #パラメータの設定"response_format": "geojson", "z": "13", "x": "7280", "y": "3219", "from": "20223", "to": "20234"
+mlit_params = {"year": "2021", "area": "12"} #パラメータの設定"response_format": "geojson", "z": "13", "x": "7280", "y": "3219", "from": "20223", "to": "20234"
 
 mlit_key = input("Input your API key: ") #コマンドライン上でAPIキーの入力を求める
 mlit_headers = {"Ocp-Apim-Subscription-Key": mlit_key, "Accept-Encoding": "gzip"} #APIキーをリクエストヘッダー用に格納する。gzipのレスポンスを許可する。
